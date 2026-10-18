@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f5efe4" />
+  <title>Sunny's English Village</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Sunny's English Village 首頁">
+        <span class="brand-mark">☀</span>
+        <span><strong>Sunny's</strong><small>ENGLISH VILLAGE</small></span>
+      </a>
+      <nav class="main-nav" aria-label="主要導覽">
+        <button class="nav-link active" data-view="home">Village</button>
+        <button class="nav-link" data-view="learn">Learn</button>
+        <button class="nav-link" data-view="home-design">My Home</button>
+        <button class="nav-link" data-view="pet">Pet Corner</button>
+      </nav>
+      <div class="wallet">
+        <span class="coin-icon">✦</span>
+        <strong id="coin-count">120</strong>
+        <span class="wallet-label">coins</span>
+        <button class="avatar" title="我的小檔案" aria-label="我的小檔案">🐻</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="view active" id="view-home">
+        <div class="welcome-row">
+          <div>
+            <p class="eyebrow">A LITTLE LEARNING, A LOT OF GROWING</p>
+            <h1>Hello, little explorer! <span class="wave">✦</span></h1>
+            <p class="subtitle">每天學一點英文，讓你的小小世界慢慢長大。</p>
+          </div>
+          <div class="streak-card"><span class="streak-icon">☀</span><div><strong>3 day streak!</strong><small>You're doing great.</small></div></div>
+        </div>
+
+        <div class="hero-grid">
+          <article class="hero-card">
+            <div class="hero-copy">
+              <span class="pill">YOUR COZY CORNER</span>
+              <h2>Welcome to<br />your little home.</h2>
+              <p>Learn new words, collect lovely things, and make this place yours.</p>
+              <button class="primary-btn" data-view="home-design">Explore my home <span>↗</span></button>
+            </div>
+            <div class="house-scene" aria-label="可愛的復古風小屋插畫">
+              <div class="sun-disc"></div><div class="cloud cloud-one"></div><div class="cloud cloud-two"></div>
+              <div class="hill hill-back"></div><div class="hill hill-front"></div>
+              <div class="house">
+                <div class="roof"></div><div class="house-wall">
+                  <div class="window"><span></span></div><div class="door"><i></i></div>
+                  <div class="house-plant">🌿</div>
+                </div>
+              </div>
+              <div class="flower flower-a">✿</div><div class="flower flower-b">✿</div>
+              <div class="mailbox">✉</div>
+            </div>
+          </article>
+          <article class="daily-card">
+            <div class="card-heading"><span class="icon-tile peach">✦</span><span class="eyebrow">TODAY'S LITTLE GOAL</span></div>
+            <h3>Small steps,<br />bright days.</h3>
+            <p>Finish one activity and earn coins for your home.</p>
+            <div class="progress-label"><span>Daily progress</span><strong id="daily-progress-text">1 / 3</strong></div>
+            <div class="progress-track"><span id="daily-progress-bar" style="width:33%"></span></div>
+            <button class="text-btn" data-view="learn">Continue learning <span>→</span></button>
+            <div class="daily-sun">☼</div>
+          </article>
+        </div>
+
+        <section class="section-block">
+          <div class="section-title"><div><p class="eyebrow">PICK YOUR NEXT ADVENTURE</p><h2>What shall we do today?</h2></div><span class="tiny-note">Choose a little quest ✨</span></div>
+          <div class="activity-grid">
+            <button class="activity-card green-card" data-game="match">
+              <span class="activity-emoji">🧩</span><span class="activity-tag">5 MIN</span><strong>Word Match</strong><small>Match words to pictures</small><span class="card-arrow">↗</span>
+            </button>
+            <button class="activity-card yellow-card" data-game="sentence">
+              <span class="activity-emoji">🔤</span><span class="activity-tag">5 MIN</span><strong>Sentence Builder</strong><small>Put words in order</small><span class="card-arrow">↗</span>
+            </button>
+            <button class="activity-card lavender-card" data-game="memory">
+              <span class="activity-emoji">🃏</span><span class="activity-tag">3 MIN</span><strong>Memory Flip</strong><small>Find the matching pairs</small><span class="card-arrow">↗</span>
+            </button>
+            <button class="activity-card peach-card" data-game="listen">
+              <span class="activity-emoji">🎧</span><span class="activity-tag">4 MIN</span><strong>Listen & Find</strong><small>Listen and choose</small><span class="card-arrow">↗</span>
+            </button>
+          </div>
+        </section>
+
+        <section class="bottom-grid">
+          <article class="mini-panel">
+            <div class="section-title compact"><div><p class="eyebrow">YOUR LITTLE FRIEND</p><h2>Meet your pet</h2></div><button class="round-arrow" data-view="pet">↗</button></div>
+            <div class="pet-preview"><div class="pet-orb">🐶</div><div><strong>Mochi</strong><p>“Hello! Let's learn together!”</p><span class="pet-status">● Happy and ready to play</span></div></div>
+          </article>
+          <article class="mini-panel notice-panel">
+            <p class="eyebrow">VILLAGE NOTICEBOARD</p><h2>Autumn is here! 🍂</h2><p>Collect warm colors and cozy decorations for your little home.</p><button class="text-btn" data-view="home-design">See decorations <span>→</span></button>
+          </article>
+        </section>
+      </section>
+
+      <section class="view" id="view-learn">
+        <div class="page-heading"><p class="eyebrow">LEARN A LITTLE EVERY DAY</p><h1>Let's learn together! <span>📚</span></h1><p class="subtitle">每一次練習，都是讓英文更熟悉的一小步。</p></div>
+        <div class="learning-layout">
+          <aside class="learning-sidebar">
+            <div class="level-badge">🌱 <span><strong>Little Sprout</strong><small>Learning level</small></span></div>
+            <div class="learning-stat"><span>Words explored</span><strong id="words-count">12 / 1,200</strong></div>
+            <div class="progress-track"><span id="word-progress" style="width:1%"></span></div>
+            <div class="learning-stat"><span>Grammar path</span><strong>1 / 12</strong></div>
+            <div class="progress-track"><span style="width:8%"></span></div>
+            <p class="sidebar-tip">💡 <strong>Little tip</strong><br />It's okay to make mistakes. Every try helps you grow!</p>
+          </aside>
+          <div class="learning-main">
+            <div class="section-title"><div><p class="eyebrow">CHOOSE YOUR GAME</p><h2>Learning playground</h2></div></div>
+            <div class="game-list">
+              <button class="game-row" data-game="match"><span class="game-icon green-card">🧩</span><span><strong>Word Match</strong><small>Connect a word with its meaning.</small></span><span class="game-level">Beginner</span><span class="row-arrow">→</span></button>
+              <button class="game-row" data-game="sentence"><span class="game-icon yellow-card">🔤</span><span><strong>Sentence Builder</strong><small>Put the words in the right order.</small></span><span class="game-level">Beginner</span><span class="row-arrow">→</span></button>
+              <button class="game-row" data-game="memory"><span class="game-icon lavender-card">🃏</span><span><strong>Memory Flip</strong><small>Find pairs and remember new words.</small></span><span class="game-level">Beginner</span><span class="row-arrow">→</span></button>
+              <button class="game-row" data-game="listen"><span class="game-icon peach-card">🎧</span><span><strong>Listen & Find</strong><small>Listen to a word and pick the picture.</small></span><span class="game-level">Beginner</span><span class="row-arrow">→</span></button>
+            </div>
+            <div class="grammar-strip"><span>✏️</span><div><strong>Grammar garden</strong><p>Start with “I am…” and grow your first English sentences.</p></div><button class="secondary-btn" id="grammar-btn">Try it</button></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="view" id="view-home-design">
+        <div class="page-heading"><p class="eyebrow">MAKE YOURSELF AT HOME</p><h1>My cozy little home <span>🏡</span></h1><p class="subtitle">用學習收集的小金幣，打造專屬於你的溫暖角落。</p></div>
+        <div class="home-layout">
+          <div class="room-preview">
+            <div class="room-window"><span class="window-sun">☀</span><span class="window-cloud">☁</span></div>
+            <div class="room-wall-art">✿</div>
+            <div class="room-shelf"><span>📚</span><span>🪴</span><span>🧸</span></div>
+            <div class="room-floor"></div>
+            <div class="room-rug"></div>
+            <div class="room-sofa"><span class="cushion"></span><span class="cushion two"></span></div>
+            <div class="room-table"><span>🌼</span></div>
+            <div class="room-lamp">☼</div>
+            <div class="room-cat">🐱</div>
+            <div class="room-caption"><span class="live-dot"></span> MY HOME <small>Cozy level 1</small></div>
+          </div>
+          <aside class="shop-panel">
+            <div class="shop-head"><div><p class="eyebrow">THE LITTLE SHOP</p><h2>Pick a lovely thing</h2></div><span class="shop-coins">✦ <b id="shop-coin-count">120</b></span></div>
+            <div class="shop-tabs"><button class="shop-tab active" data-category="all">All</button><button class="shop-tab" data-category="furniture">Furniture</button><button class="shop-tab" data-category="decor">Decor</button><button class="shop-tab" data-category="pet">Pet</button></div>
+            <div class="shop-items" id="shop-items"></div>
+            <p class="shop-hint">✨ Keep learning to earn more coins!</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="view" id="view-pet">
+        <div class="page-heading"><p class="eyebrow">A FRIEND TO GROW WITH</p><h1>Welcome to Pet Corner! <span>🐾</span></h1><p class="subtitle">跟小夥伴一起練習英文，也一起留下可愛的日常。</p></div>
+        <div class="pet-page">
+          <div class="pet-big-card"><div class="pet-sparkle">✦</div><div class="pet-big">🐶</div><div class="pet-name">Mochi</div><p class="pet-quote" id="pet-quote">“You make my day sunny!”</p><div class="pet-mood">☀ Feeling happy</div></div>
+          <div class="pet-activities"><p class="eyebrow">LET'S PLAY & LEARN</p><h2>What should we say?</h2><p>Choose an English phrase to share with Mochi.</p><div class="phrase-list"><button class="phrase-btn" data-phrase="Hello, Mochi!">👋 Hello, Mochi!</button><button class="phrase-btn" data-phrase="Let's play together!">🎾 Let's play together!</button><button class="phrase-btn" data-phrase="You are my friend.">💛 You are my friend.</button><button class="phrase-btn" data-phrase="Good job, little buddy!">⭐ Good job, little buddy!</button></div><div class="pet-feedback" id="pet-feedback">Pick a phrase to make Mochi smile.</div></div>
+        </div>
+      </section>
+    </main>
+    <footer><span>☀ Sunny's English Village</span><span>Learn • Play • Grow together</span></footer>
+  </div>
+
+  <div class="modal-backdrop" id="game-modal" hidden>
+    <section class="game-modal" role="dialog" aria-modal="true" aria-labelledby="game-title">
+      <button class="modal-close" id="close-game" aria-label="關閉遊戲">×</button>
+      <p class="eyebrow">A LITTLE CHALLENGE</p><h2 id="game-title">Word Match</h2><p id="game-instructions" class="game-instructions">Choose the correct answer.</p>
+      <div id="game-content"></div>
+      <div class="game-message" id="game-message" aria-live="polite"></div>
+      <div class="modal-footer"><span>Reward: <strong>+10 coins</strong></span><button class="primary-btn" id="next-question">Check answer <span>→</span></button></div>
+    </section>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
